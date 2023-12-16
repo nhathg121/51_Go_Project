@@ -19,6 +19,7 @@ func main(){
 		log.Fatal(err)
 	}
 }
+// helloHandler is a handler function for the /hello route
 func helloHandler(w http.ResponseWriter, r *http.Request){
 	if r.URL.Path != "/hello" {
 
@@ -32,6 +33,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request){
 	fmt.Fprintf(w, "Hello !")
 }
 
+// formHandler is a handler function for the /form route
 func formHandler(w http.ResponseWriter, r *http.Request){
 	if err := r.ParseForm(); err != nil{
 			fmt.Fprintf(w,"ParseForm() err: %v", err)
