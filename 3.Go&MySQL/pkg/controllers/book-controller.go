@@ -19,7 +19,9 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(newBook)
 	newBooks := models.GetAllBooks()
+
 	res, _ := json.Marshal(newBooks)
+
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	_, err := w.Write(res)

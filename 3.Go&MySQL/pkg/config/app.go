@@ -10,11 +10,10 @@ var (
 )
 
 func Connect() {
-	d, err := gorm.Open("mysql", "po2ph09ofv26fm1g9ovw:pscale_pw_Und4Q2TR9pHfUGerOtK8pqowitTmrW9t7nIpCdC4fBc@tcp(aws.connect.psdb.cloud)/test?tls=true&interpolateParams=true")
+	d, err := gorm.Open("mysql", "u6sl26lkhk6kyhke8oak:pscale_pw_yikMwWvMNlQTBITvYxIP6zTcvzK3OedgatMmIqwR0SI@tcp(aws.connect.psdb.cloud)/test?tls=true&interpolateParams=true")
 	if err != nil {
 		panic(err)
 	}
-
 	db = d
 }
 
