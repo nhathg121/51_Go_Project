@@ -21,7 +21,6 @@ func main() {
 // helloHandler is a handler function for the /hello route
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
-
 		http.Error(w, "404 Not found", http.StatusNotFound)
 		return
 	}

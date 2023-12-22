@@ -61,10 +61,12 @@ func createMovie(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var movie Movie
 	json.NewDecoder(r.Body).Decode(&movie)
-	movies = append(movies, movie)
+	
 	movie.ID = strconv.Itoa(rand.Intn(100000))
 	movies = append(movies, movie)
 	json.NewEncoder(w).Encode(movie)
+
+
 
 }
 
@@ -83,6 +85,7 @@ func updateMovie(w http.ResponseWriter, r *http.Request) {
 			break
 		}
 	}
+	
 }
 
 func main() {
