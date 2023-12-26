@@ -1,4 +1,4 @@
-module github.com/51
+module github.com/51_Go_Poject
 
 go 1.21.4
 

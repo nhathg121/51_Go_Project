@@ -1,4 +1,4 @@
-package handle
+package user_handler
 
 import "github.com/labstack/echo"
 
